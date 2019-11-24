@@ -24,7 +24,7 @@
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #89CC25;
   box-shadow: 12px 8px rgba(0, 0, 0, 0.2);
 }
@@ -47,7 +47,7 @@
 .installments-title{
   font-family: 'Poppins';
   font-weight: 800;
-  color: black;
+  color: #89CC25;
 }
 
 .installments-date{

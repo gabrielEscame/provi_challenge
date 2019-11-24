@@ -1,9 +1,27 @@
-img{
-  height: 100%;
-  width: 100%;
+body{
+  overflow: auto;
+}
+.mainInfo-card{
+  display: flex;
+  align-items: center;
+  height: 300px;
+  width: 100vw;
+  background-image: linear-gradient(to right, #89CC25, #ADFF2F);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-.mainInfo-card{
-  height: 300px;
-  width: 42vw;
+.mainInfo-real-sign{
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-weight: 600;
 }
+
+.mainInfo-amountTaken{
+  margin-left: 80px ;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 50px;
+  color: white;
+}
+

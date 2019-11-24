@@ -14,7 +14,9 @@ const MainInfo = () => {
 
   return(
     <div className='mainInfo-card'>
-      
+      <h1 className='mainInfo-amountTaken'>
+        {data.map(e => `$${e.amountTaken},00`)}
+      </h1>
     </div>
   )
 
