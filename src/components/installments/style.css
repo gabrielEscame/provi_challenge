@@ -1,0 +1,94 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.installments-container{
+  height: 120px;
+  width: 40vw;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 12px 8px rgba(0, 0, 0, 0.2);
+}
+
+.installments-container:hover{
+  width: 42vw;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+.installments-container-paid{
+  height: 120px;
+  width: 40vw;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: 30px;
+  background-color: #89CC25;
+  box-shadow: 12px 8px rgba(0, 0, 0, 0.2);
+}
+
+.installments-container-paid:hover{
+  background-color: rgba(137, 204, 37, 0.85);
+  width: 42vw;
+}
+
+.installments-number{
+  font-family: 'Poppins';
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);  
+  padding-top: 10px;
+  padding-left: 25px;
+}
+
+
+.installments-title{
+  font-family: 'Poppins';
+  font-weight: 800;
+  color: black;
+}
+
+.installments-date{
+  font-family: 'Poppins';
+  margin-left: 70px;
+  font-size: 14px;
+  font-weight: 200;
+  color: white;
+}
+
+.installments-real-sign{
+  font-size: 16px;
+  /* color: rgba(0, 0, 0, 0.6); */
+  color: white;
+  font-family: 'Poppins';
+}
+
+.installments-value{
+  font-family: 'Poppins';
+  font-weight: 600;
+  padding-left: 30px;
+  color: #adff2f;
+}
+
+.installments-state-grey{
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Poppins';
+  font-size: 18px;
+  padding-right: 25px;
+  font-weight: 400;
+}
+
+.installments-state-green{
+  color: #adff2f;
+  font-family: 'Poppins';
+  font-size: 18px;
+  padding-right: 30px;
+  font-weight: 400;
+}
+
+.installments-main-values{
+  display: flex;
+  justify-content: space-between;
+}
