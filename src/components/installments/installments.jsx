@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Chart from '../Chart/chart'
 import './style.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,20 +13,24 @@ const Installment = () => {
       .then(response => setData([response.data]))
       .catch(err => console.log(err)
       );
-      AOS.init({
-        duration : 1000
-      })
+    AOS.init({
+      duration: 1000
+    })
   }, [])
 
-  console.log(data);
+  let chartValue = data.map(e => [e.amountTaken, e.totalAmountInTaxes]);
   return (
-    <div className='b'>
-      <h1 className='installments-title'>Installments</h1>
+    <div className='installments-main-container'>
+      <div className="intallments-chart-container">
+        <h2>Percentages</h2>
+        <Chart values={chartValue} />
+      </div>
+      <h1 className='installments-title'>Your installments</h1>
       {
         data.map((e) => (
           e.installments.map((e, idx) =>
-            <div data-aos='fade-right'key={idx} className={e.payd ? 'installments-container-paid' : 'installments-container'}>
-              <h2 className='installments-number'>{`${idx + 1}ª parcela:`}</h2>
+            <div data-aos='fade-right' key={idx} className={e.payd ? 'installments-container-paid' : 'installments-container'}>
+              <h2 className='installments-number'>{`${idx + 1}ª installment:`}</h2>
               <div className='installments-main-values'>
                 <h2 className='installments-value'><span className='installments-real-sign'>$ </span>{e.formatedValue.split(' ')[1]}</h2>
                 {

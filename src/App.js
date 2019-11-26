@@ -1,14 +1,14 @@
 import React from 'react';
-import Installment from './components/installments/installments'
-import MainInfo from './components/mainInfo/mainInfo'
+import './style.css';
+import Installment from './components/installments/installments';
+import MainInfo from './components/mainInfo/mainInfo';
 
 const App = () => {
   return(
-    <div>
+    <div className='container'>
       
       <MainInfo />
-      <Installment/>
-      
+      <Installment/>  
     </div>
   );
 }
