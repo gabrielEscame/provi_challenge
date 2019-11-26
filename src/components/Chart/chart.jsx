@@ -3,7 +3,7 @@ import { Doughnut, defaults } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
 import './style.css'
 
-const Chart = ({ values }) => {
+const Chart = ({ values, title }) => {
   const [chartData] = useState({
     labels: ['Loan', 'Tax'],
     datasets:
@@ -14,13 +14,12 @@ const Chart = ({ values }) => {
         defaultFontSize: 40
       }]
   });
-
-  let total = chartData.datasets[0].data
-  console.log(total);
   
   defaults.global.animation.duration = 1200;
 
   return (
+    <div className="chart-container">
+        <h2>{title}</h2>
     <div className="chart">
       <Doughnut height={200} data={chartData}
         options={{
@@ -43,6 +42,7 @@ const Chart = ({ values }) => {
             }
           }
         }} />
+    </div>
     </div>
   )
 }

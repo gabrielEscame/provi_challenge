@@ -1,3 +1,26 @@
 .chart{
   margin-bottom: 30px;
 }
+
+
+.chart-container{
+  margin-top: 90px;
+  margin-right: 95px;
+  width: 28vw;
+  height: 300px;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border-top-right-radius: 0px;
+}
+
+.chart-container > h2{
+  font-family: 'Poppins';
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  font-weight: 400;
+}
