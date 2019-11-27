@@ -1,21 +1,27 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import { Doughnut, defaults } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
 import './style.css'
 
 const Chart = ({ values, title }) => {
-  const [chartData] = useState({
-    labels: ['Loan', 'Tax'],
-    datasets:
-      [{
-        data: [3000, 500],
-        backgroundColor: ['#d2ff2f', '#89CC25'],
-        borderColor: 'transparent',
-        defaultFontSize: 40
-      }]
-  });
-  
+  const [chartData, setChartData] = useState({});
+
+  useEffect(()=> {
+    setChartData({
+      labels: ['Loan', 'Tax'],
+      datasets:
+        [{
+          data: values ? values : null,
+          backgroundColor: ['#d2ff2f', '#89CC25'],
+          borderColor: 'transparent',
+          defaultFontSize: 40
+        }]
+    })
+  }, [values])
+
   defaults.global.animation.duration = 1200;
+
+  console.log(values);
 
   return (
     <div className="chart-container">
