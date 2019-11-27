@@ -18,8 +18,6 @@ const Installment = () => {
     })
   }, [])
 
-  
-  let chartValue = data.map(e => [e.amountTaken, e.totalAmountInTaxes]);
   return (
     <div className='installments-main-container'>
       <div className="installments-intallment-container">
@@ -42,7 +40,7 @@ const Installment = () => {
         }
 
       </div>
-        <Chart title='Percentages' values={chartValue} />
+        <Chart title='Percentages' values={[3000, 500]}/>
     </div>
   );
 }

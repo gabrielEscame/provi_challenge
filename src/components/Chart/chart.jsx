@@ -5,13 +5,13 @@ import './style.css'
 
 const Chart = ({ values, title }) => {
   const [chartData, setChartData] = useState({});
-
+  console.log(values);
   useEffect(()=> {
     setChartData({
       labels: ['Loan', 'Tax'],
       datasets:
         [{
-          data: values ? values : null,
+          data: values,
           backgroundColor: ['#d2ff2f', '#89CC25'],
           borderColor: 'transparent',
           defaultFontSize: 40
@@ -20,9 +20,6 @@ const Chart = ({ values, title }) => {
   }, [values])
 
   defaults.global.animation.duration = 1200;
-
-  console.log(values);
-
   return (
     <div className="chart-container">
         <h2>{title}</h2>
@@ -43,7 +40,7 @@ const Chart = ({ values, title }) => {
           plugins: {
             datalabels: {
               formatter: (value) => {
-                return Math.round((value * 100) / 3500) + '%'
+                return Math.round((value * 100) / values.reduce((acc, cur) => acc + cur)) + '%'
               }
             }
           }
