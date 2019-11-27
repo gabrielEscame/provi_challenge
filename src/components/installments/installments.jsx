@@ -18,6 +18,8 @@ const Installment = () => {
     })
   }, [])
   
+  console.log(data);
+  
   return (
     <div className='installments-main-container'>
       <div className="installments-intallment-container">
@@ -40,7 +42,10 @@ const Installment = () => {
         }
 
       </div>
-        <Chart title='Percentages' tax={data === [] ? null : data.map(e => e.totalAmountInTaxes)} loan={data === [] ? null : data.map(e => e.amountTaken)}/>
+      <div className="installments-charts-container">
+        <Chart title='Percentages' value_two={data === [] ? null : data.map(e => e.totalAmountInTaxes)} value_one={data === [] ? null : data.map(e => e.amountTaken)} labels={['Loan', 'Tax']}/>
+        <Chart title='Total paid' value_one={data.map(e => e.amountPayd)} value_two={data.map(e => (e.amountTaken + e.totalAmountInTaxes) - e.amountPayd)} labels={['payd', 'Remaining']} />
+      </div>
     </div>
   );
 }

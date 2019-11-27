@@ -3,20 +3,20 @@ import { Doughnut, defaults } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
 import './style.css'
 
-const Chart = ({ tax, loan, title }) => {
+const Chart = ({ value_one, value_two, title, labels }) => {
   const [chartData, setChartData] = useState({});
   useEffect(()=> {
     setChartData({
-      labels: ['Loan', 'Tax'],
+      labels: labels,
       datasets:
         [{
-          data: [loan, tax],
+          data: [value_one, value_two],
           backgroundColor: ['#d2ff2f', '#89CC25'],
           borderColor: 'transparent',
           defaultFontSize: 40
         }]
     })
-  }, [loan, tax])
+  }, [value_one, value_two])
   
   defaults.global.animation.duration = 1200;
   return (
@@ -39,7 +39,7 @@ const Chart = ({ tax, loan, title }) => {
           plugins: {
             datalabels: {
               formatter: (value) => {
-                let total = parseInt(tax) + parseInt(loan);
+                let total = parseInt(value_one) + parseInt(value_two);
                 return Math.round((value * 100) / total) + '%'
               }
             }
