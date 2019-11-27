@@ -70,3 +70,43 @@ body{
   display: flex;
   flex-direction: column;
 }
+
+
+/* Resposive mobile */
+@media only screen and (max-width: 500px) {
+  body {
+    background-image: linear-gradient(to right, #89CC25, #ADFF2F);
+  }
+
+  .mainInfo-card{
+    height: 200px;
+  }
+
+  .mainInfo-welcome{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+  }
+
+  .mainInfo-user-tips{
+    margin-left: 20px;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    width: 42vw;
+    line-height: 15px;
+  }
+
+  .mainInfo-avatar-icon{
+    margin: 0px;
+    margin-right: 20px;
+    height: 120px;
+    width: 120px;
+  }
+  
+}
+

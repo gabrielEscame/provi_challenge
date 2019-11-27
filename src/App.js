@@ -1,15 +1,9 @@
 import React from 'react';
-import './style.css';
-import Installment from './components/installments/installments';
-import MainInfo from './components/mainInfo/mainInfo';
+import InstallmentPage from './Pages/intallment-page'
 
 const App = () => {
   return(
-    <div className='container'>
-      
-      <MainInfo />
-      <Installment/>  
-    </div>
+      <InstallmentPage />
   );
 }
 

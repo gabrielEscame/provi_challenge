@@ -1,6 +1,7 @@
 *{
   margin: 0px;
   padding: 0px;
+  outline: none;
 }
 
 .installments-main-container{
@@ -117,3 +118,35 @@
   align-items: center;
 }
 
+/* Resposive mobile */
+@media only screen and (max-width: 500px) {
+  
+  .installments-main-container{
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  
+  .installments-intallment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .installments-charts-container{
+    justify-content: center;
+  }
+
+  .installments-title{
+    font-size: 25px;
+    margin-left:0px;
+    margin-right: 0px;
+  }
+
+  .installments-container{
+    height: 95px;
+    width: 300px;
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+}

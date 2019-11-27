@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../services/api';
-import Chart from '../Chart/chart'
 import './style.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import api from '../../services/api';
+import Chart from '../Chart/chart'
+import Button from '../button/button'
 
 const Installment = () => {
   const [data, setData] = useState([]);
@@ -17,9 +18,7 @@ const Installment = () => {
       duration: 1000
     })
   }, [])
-  
-  console.log(data);
-  
+
   return (
     <div className='installments-main-container'>
       <div className="installments-intallment-container">
@@ -43,7 +42,7 @@ const Installment = () => {
 
       </div>
       <div className="installments-charts-container">
-        <Chart title='Percentages' value_two={data === [] ? null : data.map(e => e.totalAmountInTaxes)} value_one={data === [] ? null : data.map(e => e.amountTaken)} labels={['Loan', 'Tax']}/>
+        <Chart title='Percentages' value_two={data === [] ? null : data.map(e => e.totalAmountInTaxes)} value_one={data === [] ? null : data.map(e => e.amountTaken)} labels={['Loan', 'Tax']} />
         <Chart title='Total paid' value_one={data.map(e => e.amountPayd)} value_two={data.map(e => (e.amountTaken + e.totalAmountInTaxes) - e.amountPayd)} labels={['payd', 'Remaining']} />
       </div>
     </div>
