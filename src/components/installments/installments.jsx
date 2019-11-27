@@ -17,7 +17,7 @@ const Installment = () => {
       duration: 1000
     })
   }, [])
-
+  
   return (
     <div className='installments-main-container'>
       <div className="installments-intallment-container">
@@ -40,7 +40,7 @@ const Installment = () => {
         }
 
       </div>
-        <Chart title='Percentages' values={[3000, 500]}/>
+        <Chart title='Percentages' tax={data === [] ? null : data.map(e => e.totalAmountInTaxes)} loan={data === [] ? null : data.map(e => e.amountTaken)}/>
     </div>
   );
 }
