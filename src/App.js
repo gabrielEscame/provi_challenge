@@ -1,5 +1,5 @@
 import React from 'react';
-import InstallmentPage from './Pages/intallment-page'
+import InstallmentPage from './Pages'
 
 const App = () => {
   return(

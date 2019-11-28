@@ -3,7 +3,7 @@ import './style.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import api from '../../services/api';
-import Chart from '../Chart/chart';
+import Chart from '../Chart';
 
 const Installment = () => {
   const [data, setData] = useState([]);
@@ -20,7 +20,7 @@ const Installment = () => {
 
   return (
     <div className='installments-main-container'>
-      <div className="installments-intallment-container">
+      <div className="installments-section-container">
         <h1 className='installments-title'>Your installments</h1>
         {
           data.map((e) => (
@@ -41,7 +41,7 @@ const Installment = () => {
 
       </div>
       <div className="installments-charts-container">
-        <Chart title='Percentages' value_two={data === [] ? null : data.map(e => e.totalAmountInTaxes)} value_one={data === [] ? null : data.map(e => e.amountTaken)} labels={['Loan', 'Tax']} />
+        <Chart title='Percentages' value_two={data.map(e => e.totalAmountInTaxes)} value_one={data.map(e => e.amountTaken)} labels={['Loan', 'Tax']} />
         <Chart title='Total paid' value_one={data.map(e => e.amountPayd)} value_two={data.map(e => (e.amountTaken + e.totalAmountInTaxes) - e.amountPayd)} labels={['payd', 'Remaining']} />
       </div>
     </div>
