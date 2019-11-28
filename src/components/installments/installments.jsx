@@ -3,8 +3,7 @@ import './style.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import api from '../../services/api';
-import Chart from '../Chart/chart'
-import Button from '../button/button'
+import Chart from '../Chart/chart';
 
 const Installment = () => {
   const [data, setData] = useState([]);
@@ -26,12 +25,12 @@ const Installment = () => {
         {
           data.map((e) => (
             e.installments.map((e, idx) =>
-              <div data-aos='fade-right' key={idx} className={e.payd ? 'installments-container-paid' : 'installments-container'}>
+              <div data-aos='fade-right' key={idx} className='installments-container'>
                 <h2 className='installments-number'>{`${idx + 1}ª installment:`}</h2>
                 <div className='installments-main-values'>
                   <h2 className='installments-value'><span className='installments-real-sign'>$ </span>{e.formatedValue.split(' ')[1]}</h2>
                   {
-                    e.payd ? <h3 className='installments-state-green'>Paid!</h3> : <h3 className='installments-state-grey'>Not paid</h3>
+                    ! e.payd ? <h3 className='installments-state-green'>Paid!</h3> : <h3 className='installments-state-grey'>Not paid</h3>
                   }
                 </div>
                 <p className='installments-date'>{e.dueDate}</p>

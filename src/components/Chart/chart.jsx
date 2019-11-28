@@ -11,7 +11,7 @@ const Chart = ({ value_one, value_two, title, labels }) => {
       datasets:
         [{
           data: [value_one, value_two],
-          backgroundColor: ['#d2ff2f', '#89CC25'],
+          backgroundColor: ['#4bb1c9', '#993cb1'],
           borderColor: 'transparent',
           defaultFontSize: 40
         }]

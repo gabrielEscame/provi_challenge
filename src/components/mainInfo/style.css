@@ -1,6 +1,6 @@
 body{
   overflow: auto;
-  background-image: linear-gradient(to right, #89CC25, #ADFF2F);
+  background-image: linear-gradient(to right, #993cb1, #4bb1c9);
 
 }
 .mainInfo-card{
@@ -23,7 +23,7 @@ body{
 
 .mainInfo-welcome{
   margin-left: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   font-family: 'Poppins';
   font-weight: 600;
   font-size: 45px;
@@ -48,8 +48,8 @@ body{
   width: 170px;
   margin-right: 160px;
   border-radius: 90px;
-  border-top-right-radius: 10px;
-  background-color: rgb(210, 255, 47);
+  border-bottom-left-radius: 10px;
+  background-color: #993cb1;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1)
 }
 
@@ -74,20 +74,17 @@ body{
 
 /* Resposive mobile */
 @media only screen and (max-width: 500px) {
-  body {
-    background-image: linear-gradient(to right, #89CC25, #ADFF2F);
-  }
-
+  
   .mainInfo-card{
     height: 200px;
   }
 
   .mainInfo-welcome{
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
   }
 
@@ -95,7 +92,7 @@ body{
     margin-left: 20px;
     font-family: 'poppins';
     font-weight: 400;
-    font-size: 15px;
+    font-size: 10px;
     color: white;
     width: 42vw;
     line-height: 15px;
