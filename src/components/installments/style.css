@@ -30,22 +30,6 @@
   width: 52vw;
 }
 
-.installments-container-paid{
-  height: 120px;
-  width: 50vw;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  margin-bottom: 38px;
-  margin-left: 50px;
-  background-color: #89CC25;
-  box-shadow: 12px 8px rgba(0, 0, 0, 0.2);
-}
-
-.installments-container-paid:hover{
-  background-color: rgba(137, 204, 37, 0.85);
-}
-
 .installments-number{
   font-family: 'Poppins';
   font-size: 15px;
@@ -117,7 +101,7 @@
 }
 
 /* Resposive mobile */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   
   .installments-main-container{
     flex-flow: wrap;

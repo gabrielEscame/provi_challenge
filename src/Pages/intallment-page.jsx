@@ -3,7 +3,7 @@ import Installments from '../components/installments/installments';
 import MainInfo from '../components/mainInfo/mainInfo';
 
 const InstallmentPage = () => {
-  return(
+  return (
     <>
       <MainInfo />
       <Installments />

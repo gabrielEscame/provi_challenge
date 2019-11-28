@@ -30,7 +30,7 @@ const Installment = () => {
                 <div className='installments-main-values'>
                   <h2 className='installments-value'><span className='installments-real-sign'>$ </span>{e.formatedValue.split(' ')[1]}</h2>
                   {
-                    ! e.payd ? <h3 className='installments-state-green'>Paid!</h3> : <h3 className='installments-state-grey'>Not paid</h3>
+                    e.payd ? <h3 className='installments-state-green'>Paid!</h3> : <h3 className='installments-state-grey'>Not paid</h3>
                   }
                 </div>
                 <p className='installments-date'>{e.dueDate}</p>
