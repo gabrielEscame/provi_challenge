@@ -1,10 +1,8 @@
-import React from 'react';
-import InstallmentPage from './Pages'
+import React from 'react'
+import { InstallmentPage } from './Pages/InstallmentPage'
 
 const App = () => {
-  return(
-      <InstallmentPage />
-  );
+  return <InstallmentPage />
 }
 
-export default App;
+export default App
